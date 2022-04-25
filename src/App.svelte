@@ -7,6 +7,7 @@
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 </div>
 
+<footer class="footer">&copy; 2022 All right reserved.</footer>
 <style>
 	div {
 		text-align: center;
@@ -26,5 +27,8 @@
 		div {
 			max-width: none;
 		}
+	}
+	.footer{
+		text-align: center;
 	}
 </style>
