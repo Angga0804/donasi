@@ -13,6 +13,8 @@
                     raise capital from anyone.</p>
             </div><!-- .xs-heading-title END -->
         </div><!-- .row end -->
+        {#if donasi !== undefined}
+        {#each donasi as char }
         <div class="row">
             <div class="col-lg-4 col-md-6">
                 <!-- modal goes here -->
@@ -106,6 +108,8 @@
                 </div><!-- .xs-popular-item END -->
             </div>
         </div><!-- .row end -->
+        {/each}
+        {/if}
     </div><!-- .container end -->
 </section><!-- End popularCauses section -->
 <!-- <div >
