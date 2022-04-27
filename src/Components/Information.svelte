@@ -1,4 +1,7 @@
 <!-- footer section start -->
+<script>
+    import { FacebookIcon, TwitterIcon, InstagramIcon, DribbbleIcon, ArrowUpIcon } from 'svelte-feather-icons';
+</script>
 <footer class="xs-footer-section">
     <div class="container">
         <div class="xs-footer-top-layer">
@@ -10,10 +13,10 @@
                     <p>CharityPress online and raise money for charity and causes you’re passionate about.
                         CharityPress is an innovative, cost-effective online.</p>
                     <ul class="xs-social-list-v2">
-                        <li><a href="" class="color-facebook"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="" class="color-twitter"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="" class="color-dribbble"><i class="fa fa-dribbble"></i></a></li>
-                        <li><a href="" class="color-pinterest"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="" class="color-facebook"><FacebookIcon/></a></li>
+                        <li><a href="" class="color-twitter"><TwitterIcon/></a></li>
+                        <li><a href="" class="color-dribbble"><DribbbleIcon/></a></li>
+                        <li><a href="" class="color-pinterest"><InstagramIcon/></a></li>
                     </ul><!-- .xs-social-list END -->
                 </div>
                 <div class="col-lg-4 col-md-6 footer-widget">
@@ -60,6 +63,6 @@
         </div>
     </div>
     <div class="xs-back-to-top-wraper">
-        <a href="#" class="xs-back-to-top"><i class="fa fa-angle-up"></i></a>
+        <a href="#" class="xs-back-to-top"><ArrowUpIcon/></a>
     </div>
 </footer>
