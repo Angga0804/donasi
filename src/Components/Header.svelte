@@ -1,3 +1,7 @@
+<script>
+    import { HeartIcon } from 'svelte-feather-icons';
+</script>
+
 <!-- header section -->
 <header class="xs-header header-transparent">
     <div class="container">
@@ -23,7 +27,7 @@
                 </div>
                 <div class="xs-navs-button d-flex-center-end col-lg-3">
                     <a href="#popularcause" class="btn btn-primary">
-                        <span class="badge"><i class="fa fa-heart"></i></span> Donate Now
+                        <span class="badge"><HeartIcon size="15"/></span> Donate Now
                     </a>
                 </div><!-- .xs-navs-button END -->
             </div><!-- .nav-menus-wrapper .row END -->
