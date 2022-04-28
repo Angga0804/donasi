@@ -85,7 +85,7 @@
 
                         <div class="xs-skill-bar">
                             <div class="xs-skill-track">
-                                <p><span class="number-percentage-count number-percentage"
+                                <p><span class="number-percentage-count number-percentage" data-value={calculateFunded(char.pledged, char.target)}
                                         data-animation-duration="3500">{calculateFunded(char.pledged, char.target)}</span>%</p>
                             </div>
                         </div>
@@ -100,7 +100,7 @@
 
                         <ul class="xs-list-with-content">
                             <li>{formatCurrency(char.pledged)}<span>Pledged</span></li>
-                            <li><span class="number-percentage-count number-percentage" 
+                            <li><span class="number-percentage-count number-percentage" data-value={calculateFunded(char.pledged, char.target)} 
                                     data-animation-duration="3500">{calculateFunded(char.pledged, char.target)}</span>% <span>Funded</span></li>
                             <li>{calculateDaysRemaining(char.date_end)}<span>Days to go</span></li>
                         </ul>
