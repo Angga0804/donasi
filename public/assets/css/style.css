@@ -1150,7 +1150,7 @@ blockquote {
     color: #041D57;
     font-weight: 600;
     line-height: 1.7;
-    font-size: 1.14286em; }
+    font-size: 12px; }
     .xs-list-with-content li:last-child {
       margin: 0; }
     .xs-list-with-content li span {
