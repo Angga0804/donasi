@@ -4,6 +4,20 @@
     function calculateFunded(pledged, target){
         return Math.round((1 / (target / pledged)) *100);
     }
+
+    function formatCurrency(nominal) {
+        return nominal.toLocaleString("id-ID", {
+            style: "currency",
+            currency: "IDR"
+        });
+    }
+
+    function calculateDaysRemaining(date_end){
+        const delta = date_end - new Date();
+        const oneDay = 24 * 60 * 60 * 1000;
+
+        return Math.round(Math.abs(delta/oneDay))
+    }
 </script>
 
 <!-- popularCauses section -->
@@ -84,10 +98,10 @@
                         <a href="#" class="xs-post-title xs-mb-30">{char.title}</a>
 
                         <ul class="xs-list-with-content">
-                            <li>{char.pledged}<span>Pledged</span></li>
+                            <li>{formatCurrency(char.pledged)}<span>Pledged</span></li>
                             <li><span class="number-percentage-count number-percentage" data-value="90"
                                     data-animation-duration="3500">{char.pledged}</span>% <span>Funded</span></li>
-                            <li>{char.date_end}<span>Days to go</span></li>
+                            <li>{calculateDaysRemaining(char.date_end)}<span>Days to go</span></li>
                         </ul>
 
                         <span class="xs-separetor"></span>
@@ -128,8 +142,3 @@
     {/if}
 </div> -->
 
-<style>
-    h5{
-       color: red;
-    }
-</style>

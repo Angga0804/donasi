@@ -5,7 +5,7 @@ module.exports = {
             title: 'First Donation Project',
             category: 'Money',
             thumbnail: 'https://unsplash.com/photos/N9OpNqzRz4w',
-            pledged: 90000,
+            pledged: 9000,
             target: 100000,
             date_end: +new Date('10 August 2022'),
             profile_photo: '',
