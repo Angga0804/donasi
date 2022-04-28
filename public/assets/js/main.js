@@ -117,7 +117,7 @@ $(document).ready(function() {
 			touchDrag: true,
 			dots: false,
 			nav: true,
-			navText: ['<i class="fa fa-angle-left xs-round-nav"></i>','<i class="fa fa-angle-right xs-round-nav"></i>'],
+			// navText: ['<i class="fa fa-angle-left xs-round-nav"></i>','<i class="fa fa-angle-right xs-round-nav"></i>'],
 			autoplay: false,
 			autoplayTimeout: 5000,
 			autoplayHoverPause: true,

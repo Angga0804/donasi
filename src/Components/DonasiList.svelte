@@ -1,5 +1,9 @@
 <script>
     export let donasi;
+
+    function calculateFunded(pledged, target){
+        return Math.round((1 / (target / pledged)) *100);
+    }
 </script>
 
 <!-- popularCauses section -->
@@ -68,23 +72,22 @@
                         <div class="xs-skill-bar">
                             <div class="xs-skill-track">
                                 <p><span class="number-percentage-count number-percentage" data-value="90"
-                                        data-animation-duration="3500">0</span>%</p>
+                                        data-animation-duration="3500"></span>%</p>
                             </div>
                         </div>
                     </div><!-- .xs-item-header END -->
                     <div class="xs-item-content">
                         <ul class="xs-simple-tag xs-mb-20">
-                            <li><a href="">Food</a></li>
+                            <li><a href="">{char.category}</a></li>
                         </ul>
 
-                        <a href="#" class="xs-post-title xs-mb-30">Splash Drone 3 a Fully Waterproof Drone that
-                            floats</a>
+                        <a href="#" class="xs-post-title xs-mb-30">{char.title}</a>
 
                         <ul class="xs-list-with-content">
-                            <li>$67,000<span>Pledged</span></li>
+                            <li>{char.pledged}<span>Pledged</span></li>
                             <li><span class="number-percentage-count number-percentage" data-value="90"
-                                    data-animation-duration="3500">0</span>% <span>Funded</span></li>
-                            <li>3<span>Days to go</span></li>
+                                    data-animation-duration="3500">{char.pledged}</span>% <span>Funded</span></li>
+                            <li>{char.date_end}<span>Days to go</span></li>
                         </ul>
 
                         <span class="xs-separetor"></span>
@@ -94,7 +97,7 @@
                                 <img src="assets/images/avatar/avatar_1.jpg" alt="">
                             </div>
                             <div class="xs-avatar-title">
-                                <a href="#"><span>By</span>Ema Watson</a>
+                                <a href="#"><span>By</span>{char.profile_name}</a>
                             </div>
                         </div>
 
