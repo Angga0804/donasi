@@ -1,8 +1,13 @@
+<script>
+    import Header from "../Components/Header.svelte"
+    import Information from "../Components/Information.svelte"
+</script>
+<Header/>
 <!-- welcome section -->
 <!--breadcumb start here-->
 <section
     class="xs-banner-inner-section parallax-window"
-    style="background-image:url('assets/images/backgrounds/about_bg.jpg')"
+    style="background-image:url('/assets/images/slide1.png')"
 >
     <div class="xs-black-overlay" />
     <div class="container">
@@ -26,7 +31,7 @@
                 <div class="col-lg-6">
                     <div class="xs-donation-form-images">
                         <img
-                            src="assets/images/family.jpg"
+                            src="/assets/images/about_bg.png"
                             class="img-responsive"
                             alt="Family Images"
                         />
@@ -113,3 +118,4 @@
     </section>
     <!-- End donation form section -->
 </main>
+<Information/>

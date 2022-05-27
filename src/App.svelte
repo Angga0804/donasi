@@ -10,7 +10,7 @@
 	router('/', () => (page = Index));
 	router('/about', () => (page = About));
 	router('/contact', () => (page = Contact));
-	router('/donation', () => (page = Donation))
+	router('/donation', () => (page = Donation));
 
 	router.start();
 </script>
