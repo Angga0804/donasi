@@ -55,15 +55,16 @@
             {#each donasi as char}
                 <div class="row">
                     <div class="col-lg-4 col-md-6">
+                        {#if isModalOpen == true}
                         <Modal>
                             <!-- modal goes here -->
                             <!-- Modal -->
                             <div
-                                class="modal fade show"
-                                id="exampleModal"
-                                tabindex="-1"
-                                role="dialog"
-                                aria-labelledby="exampleModalLabel"
+                            class="modal fade show"
+                            id="exampleModal"
+                            tabindex="-1"
+                            role="dialog"
+                            aria-labelledby="exampleModalLabel"
                             >
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
@@ -155,6 +156,7 @@
                                 </div>
                             </div>
                         </Modal>
+                        {/if}
                         <div class="xs-popular-item xs-box-shadow">
                             <div class="xs-item-header">
                                 <img
