@@ -1,4 +1,5 @@
 <script>
+    import {onMount, onDestroy, beforeUpdate, afterUpdate} from 'svelte';
     import Modal from "./Modal.svelte";
     export let donasi;
 
@@ -21,12 +22,13 @@
 
         return Math.round(Math.abs(delta / oneDay));
     }
-    function handleButton(){
-        isModalOpen = true
-    }
+    // function handleButton(){
+    //     isModalOpen = true
+    // }
     function handleCloseModal(){
         isModalOpen = false;
     }
+
 </script>
 <style>
     .show{
@@ -51,9 +53,9 @@
             <!-- .xs-heading-title END -->
         </div>
         <!-- .row end -->
-        {#if donasi !== undefined}
-            {#each donasi as char}
-                <div class="row">
+        
+        <div class="row">
+                    {#each donasi as char}
                     <div class="col-lg-4 col-md-6">
                         {#if isModalOpen == true}
                         <Modal>
@@ -160,7 +162,7 @@
                         <div class="xs-popular-item xs-box-shadow">
                             <div class="xs-item-header">
                                 <img
-                                    src="assets/images/causes/causes_4.png"
+                                    src={char.thumbnail}
                                     alt=""
                                 />
 
@@ -229,7 +231,7 @@
                                 <div class="row xs-margin-0">
                                     <div class="xs-round-avatar">
                                         <img
-                                            src="assets/images/avatar/avatar_1.jpg"
+                                            src={char.profile_photo}
                                             alt=""
                                         />
                                     </div>
@@ -243,23 +245,22 @@
 
                                 <span class="xs-separetor" />
 
-                                <button
-                                    on:click={handleButton}
-                                    data-toggle="modal"
-                                    data-target="#exampleModal"
+                                <a
+                                    href="/donation/{char.id}"
                                     class="btn btn-primary btn-block"
                                 >
                                     Donate This Cause
-                            </button>
+                            </a>
+
                             </div>
                             <!-- .xs-item-content END -->
                         </div>
                         <!-- .xs-popular-item END -->
                     </div>
+                    {/each}
                 </div>
                 <!-- .row end -->
-            {/each}
-        {/if}
+        
     </div>
     <!-- .container end -->
 </section>

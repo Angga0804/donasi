@@ -4,15 +4,26 @@
 	import About from "./Pages/About.svelte"
 	import Contact from "./Pages/Contact.svelte"
 	import Donation from "./Pages/Donation.svelte"
+	import NotFound from "./Pages/NotFound.svelte"
+	import Success from "./Pages/Success.svelte"
 
-	let page;
+
+	let page, params;
 
 	router('/', () => (page = Index));
 	router('/about', () => (page = About));
 	router('/contact', () => (page = Contact));
-	router('/donation', () => (page = Donation));
+	router('/success', () => (page = Success));
+	// router('/donation', () => (page = Donation));
+
+	router("/donation/:id", (ctx, next) => {
+		params = ctx.params;
+		next();
+	}, () => (page = Donation));
+	
+	router('/*', ()=>(page = NotFound));
 
 	router.start();
 </script>
 
-<svelte:component this={page} />
+<svelte:component this={page} {params} />
